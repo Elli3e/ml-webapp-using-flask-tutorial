@@ -22,7 +22,7 @@ def predict_spam():
        comment = request.form["comment"]
        comment_tfidf = vectorizer.transform([comment])
        pred_class= model.predict(comment_tfidf)
-       pred_class = int(pred_class [0][0]> 0.5)
+       pred_class = int(pred_class[0])
        return class_dict[str(pred_class)]
     else:
      return render_template("index.html")
