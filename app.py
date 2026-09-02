@@ -4,11 +4,11 @@ from flask import Flask, request, render_template
 app = Flask(__name__)
 
 model = load(open(
-    "C:/Users/e_bab/Documents/4geeks/python-hello/ml-webapp-using-flask-tutorial/dense_keras_youtubr_spam.sav",
+    "support_vector_youtube_spam.sav",
     "rb"
 ))
 vectorizer = load(open(
-    "C:/Users/e_bab/Documents/4geeks/python-hello/ml-webapp-using-flask-tutorial/vectorize_youtubr_spam.sav",
+    "vectorize_youtubr_spam.sav",
     "rb"
 ))
 class_dict= {"0":"not_spam","1":"spam"}           
